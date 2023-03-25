@@ -1,5 +1,12 @@
-// init ip object
-const ip = new Ipify("197.210.77.240");
-ip.getIpAddress()
-  .then()
-  .catch((err) => console.log(err));
+const apiip = new Apiip();
+
+// const ui = new UI();
+
+document.addEventListener("DOMContentLoaded", getIpAddress);
+
+function getIpAddress() {
+  apiip
+    .getIp()
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+}
