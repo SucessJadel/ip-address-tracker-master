@@ -1,13 +1,107 @@
-/* #map {
-  height: 180px;
-} */
-body {
+* {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-html,
-body,
+body {
+  font-family: "Rubik", sans-serif;
+  background-image: url(/images/pattern-bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  color: white;
+  text-align: center;
+}
+
+#head-text {
+  margin: 20px 0;
+}
+.form {
+  width: 500px;
+  margin: 0px auto;
+  margin-bottom: 90px;
+  display: flex;
+  align-items: center;
+}
+input {
+  width: 100%;
+  height: 40px;
+
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  font-size: 18px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+button {
+  color: white;
+  background-color: black;
+  height: 40px;
+  border-radius: 10px;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#container {
+  width: 80vw;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  text-align: start;
+  top: 120px;
+  left: 120px;
+  z-index: 999;
+  background-color: white;
+  color: black;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+#container div {
+  width: 280px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding-top: 15px;
+  padding-left: 25px;
+  border-right: 1px;
+  position: relative;
+}
+
+#container div:after {
+  content: " ";
+  position: absolute;
+  border-left: 1px solid hsl(0, 0%, 59%);
+  top: 20%;
+  right: 0;
+  height: 60%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#container div:last-child:after {
+  border: none;
+}
+
+#container p {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 59%);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
 #map {
-  height: 100%;
+  height: 80vh;
   width: 100vw;
 }
