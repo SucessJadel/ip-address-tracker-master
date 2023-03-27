@@ -1,6 +1,6 @@
 const apiip = new Apiip();
 
-// const ui = new UI();
+const ui = new UI();
 
 document.addEventListener("DOMContentLoaded", getIpAddress);
 
@@ -19,6 +19,8 @@ function getIpAddress() {
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
       console.log(res);
+
+      ui.paint(res);
     })
     .catch((err) => console.log(err));
 }
