@@ -12,4 +12,19 @@ class Apiip {
 
     return responseData;
   }
+
+  async getNewIp(ipAddress) {
+    const res = await fetch(
+      `https://api.ipdata.co/${ipAddress}?api-key=${this.apiKey}`
+    );
+    const resData = await res.json();
+
+    return resData;
+  }
 }
+
+// let response = await fetch("page-that-redirects.com/");
+// if (response.status === 404) {
+//   let newResponse = await fetch(response.url + "?token=" + token);
+//   /* do something */
+// }
